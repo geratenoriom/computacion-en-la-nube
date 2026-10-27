@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sitio educativo sobre computación en la nube.">
+<title>Cloud Computing | El mundo en la nube</title>
+<style>
+:root{--navy:#07152e;--cyan:#62e6ff;--white:#f5f9ff;--muted:#b8c9e2;--panel:rgba(13,34,67,.78)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--white);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:radial-gradient(circle at 15% 15%,rgba(13,110,253,.35),transparent 30%),radial-gradient(circle at 85% 65%,rgba(98,230,255,.18),transparent 26%),linear-gradient(135deg,#061126 0%,#0a2346 50%,#07152e 100%);min-height:100vh}
+.site-container{width:min(1120px,calc(100% - 32px));margin:24px auto;border:1px solid rgba(255,255,255,.13);border-radius:24px;overflow:hidden;background:rgba(3,13,31,.45);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 6%;background:rgba(3,13,31,.72);border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;font-weight:750;letter-spacing:.3px}
+.logo{width:46px;height:46px;display:grid;place-items:center;border-radius:15px;color:#061126;font-size:25px;background:linear-gradient(135deg,var(--cyan),#7aa8ff);box-shadow:0 0 24px rgba(98,230,255,.25)}
+nav{display:flex;gap:22px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:.95rem}nav a:hover{color:var(--cyan)}
+main{padding:0 6% 54px}.hero{min-height:400px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:70px 0 50px}
+.eyebrow{display:inline-block;padding:8px 12px;border:1px solid rgba(98,230,255,.3);border-radius:999px;color:var(--cyan);background:rgba(98,230,255,.08);font-size:.82rem;font-weight:650;letter-spacing:.5px}
+h1{margin:18px 0;max-width:700px;font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.03;letter-spacing:-2px}h1 span{color:var(--cyan)}
+.intro{max-width:620px;color:var(--muted);line-height:1.75;font-size:1.08rem}
+.cta{display:inline-block;margin-top:18px;padding:13px 20px;color:#061126;background:linear-gradient(100deg,var(--cyan),#8db8ff);border-radius:12px;font-weight:750;text-decoration:none}
+.cloud-art{position:relative;min-height:260px;display:grid;place-items:center}.cloud{width:240px;height:105px;position:relative;border-radius:70px;background:linear-gradient(145deg,#d7f8ff,#6caeff);filter:drop-shadow(0 20px 45px rgba(67,169,255,.32))}
+.cloud:before,.cloud:after{content:"";position:absolute;border-radius:50%;background:inherit}.cloud:before{width:125px;height:125px;left:35px;top:-54px}.cloud:after{width:95px;height:95px;right:28px;top:-35px}
+.orbit{position:absolute;width:310px;height:210px;border:1px solid rgba(98,230,255,.35);border-radius:50%;transform:rotate(-25deg)}.orbit:before,.orbit:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.orbit:before{left:20px;top:38px}.orbit:after{right:22px;bottom:30px}
+section{margin-top:42px}.section-title{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 12px}.section-lead{color:var(--muted);line-height:1.7;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.card{padding:24px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:var(--panel)}.card .icon{font-size:1.8rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.65;margin-bottom:0}
+.video-box{margin-top:22px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-radius:18px;border:1px solid rgba(98,230,255,.22);background:linear-gradient(120deg,rgba(13,110,253,.2),rgba(98,230,255,.06))}.video-box p{color:var(--muted);line-height:1.65}.video-link{flex-shrink:0;display:inline-block;padding:12px 16px;border-radius:11px;color:#061126;background:var(--cyan);text-decoration:none;font-weight:750}
+footer{padding:26px 6%;background:rgba(2,9,22,.8);border-top:1px solid rgba(255,255,255,.12);color:var(--muted);line-height:1.7;font-size:.9rem}footer strong{color:var(--white)}
+@media(max-width:760px){header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;padding-top:48px}.cloud-art{min-height:220px}.cards{grid-template-columns:1fr}.video-box{align-items:flex-start;flex-direction:column}.site-container{margin:10px auto;width:calc(100% - 20px);border-radius:18px}}
+</style>
+</head>
+<body>
+<div class="site-container">
+<header>
+<a class="brand" href="#inicio" aria-label="Cloud Computing, inicio"><div class="logo" role="img" aria-label="Logotipo de nube">☁</div><span>Cloud Computing</span></a>
+<nav aria-label="Navegación principal"><a href="#que-es">¿Qué es?</a><a href="#beneficios">Beneficios</a><a href="#video">Video</a></nav>
+</header>
+<main id="inicio">
+<section class="hero">
+<div><span class="eyebrow">TECNOLOGÍA · CONECTIVIDAD · INNOVACIÓN</span><h1>El mundo<br><span>en la nube.</span></h1>
+<p class="intro">La computación en la nube permite acceder a recursos tecnológicos a través de Internet, como almacenamiento, aplicaciones, bases de datos y capacidad de procesamiento, sin depender exclusivamente de un equipo local.</p>
+<a class="cta" href="#que-es">Explorar el tema ↓</a></div>
+<div class="cloud-art" role="img" aria-label="Ilustración decorativa de una nube digital"><div class="orbit"></div><div class="cloud"></div></div>
+</section>
+<section id="que-es"><h2 class="section-title">¿Qué es la computación en la nube?</h2><p class="section-lead">Es un modelo que ofrece servicios informáticos bajo demanda por medio de Internet. Las personas y organizaciones pueden utilizar recursos cuando los necesitan y ajustar su capacidad de acuerdo con los requerimientos de sus proyectos.</p></section>
+<section id="beneficios"><h2 class="section-title">¿Por qué utilizar la nube?</h2><p class="section-lead">Algunas de sus principales ventajas son:</p>
+<div class="cards">
+<article class="card"><div class="icon" aria-hidden="true">🌐</div><h3>Acceso desde cualquier lugar</h3><p>Permite utilizar servicios y consultar información desde distintos dispositivos conectados a Internet.</p></article>
+<article class="card"><div class="icon" aria-hidden="true">📈</div><h3>Escalabilidad</h3><p>Los recursos pueden aumentar o disminuir según las necesidades de la aplicación o del proyecto.</p></article>
+<article class="card"><div class="icon" aria-hidden="true">🛠️</div><h3>Agilidad</h3><p>Facilita implementar soluciones sin tener que adquirir y mantener toda la infraestructura física.</p></article>
+</div></section>
+
+<section id="video"><h2 class="section-title">Aprende más</h2><p class="section-lead">Consulta un video educativo sobre los conceptos básicos de la computación en la nube.</p>
+<div class="video-box"><div><h3>Introducción a la computación en la nube</h3><p>Video en YouTube.</p></div><a class="video-link" href="https://youtu.be/h4Af5bbFAq0?si=7Gul39rMpx180GdS" target="_blank" rel="noopener noreferrer">▶ Ver video</a></div>
+</section>
+</main>
+<footer><strong>Datos de identificación</strong><br>
+    Curso: Conceptualización de servicios en la nube<br>
+    Nombre: Gerardo Tenorio Mejía<br>
+    Código: 224790908<br>
+    Correo de contacto: gerardo.tenorio9090@alumnos.udg.mx<br>
+    Docente: Miguel Garate<br>
+    Fecha de entrega: 27 de octubre de 2026<br>
+</footer>
+</div>
+</body>
+</html>
